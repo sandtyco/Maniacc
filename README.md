@@ -1,0 +1,2 @@
+# Maniacc
+Management Account Password
