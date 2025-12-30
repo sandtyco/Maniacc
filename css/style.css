@@ -1,0 +1,108 @@
+/* css/style.css */
+* { box-sizing: border-box; }
+
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0; /* Reset padding body */
+}
+
+/* --- Layout Login (index.php) --- */
+.login-container {
+    width: 400px;
+    margin: 100px auto;
+    border: 2px solid #00ff00;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* --- Layout Dashboard (devel/...) --- */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Tambahan CSS untuk Tata Letak Kolom Dashboard --- */
+
+.dashboard-layout {
+    display: flex; 
+    gap: 30px;
+    width: 100%;
+    align-items: flex-start; /* FIX ALIGNMENT: Memastikan kolom sejajar ke atas */
+}
+
+.column-left {
+    flex: 2; /* Kolom ini mendapat 2/3 ruang */
+    min-width: 400px;
+}
+
+.column-right {
+    flex: 1; /* Kolom ini mendapat 1/3 ruang */
+    border: 1px dashed #004400; /* Border visual untuk kolom kanan */
+    padding: 10px;
+    /* Pastikan tinggi kolom kanan sesuai dengan kontennya */
+}
+
+.column-right img {
+    max-width: 100%; /* FIX GAMBAR BESAR: Gambar tidak akan melebihi lebar kolom */
+    height: auto;
+    display: block; /* Memastikan gambar berada di barisnya sendiri */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #050505;
+    border-right: 1px solid #00ff00;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li { margin-bottom: 15px; }
+
+.sidebar a {
+    color: #008800;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    background: rgba(0, 255, 0, 0.1);
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* Area Konten Utama */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: black;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh; /* Agar main-content setinggi layar */
+    overflow: auto; /* Membantu Flexbox jika konten melebihi layar */
+}
+
+/* Elemen Input & Button Global */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: black;
+    border: 1px solid #004400;
+    color: #00ff00;
+    font-family: inherit;
+}
+input:focus { border-color: #00ff00; outline: none; box-shadow: 0 0 8px #00ff00; }
+button { cursor: pointer; background: #002200; font-weight: bold; }
+button:hover { background: #00ff00; color: black; }
